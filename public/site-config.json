@@ -1,0 +1,91 @@
+{
+    "site-links":
+    {
+        "discord-invite": "https://discord.gg/e37aq2wc66",
+        "github": "https://github.com/MarcUs7i",
+        "status-page": "https://status.marcus7i.net"
+    },
+    "buttons": [
+      {
+        "title": "Open-WebUI",
+        "url": "https://ollama.marcus7i.net",
+        "icon": "i-simple-icons-ollama",
+        "description": "Self-hosted WebUI for LLMs using Ollama"
+      },
+      {
+        "title": "uLinkShortener",
+        "url": "https://u.marcus7i.net",
+        "icon": "line-md:link",
+        "description": "URL shortener and data collector"
+      },
+      {
+        "title": "Git",
+        "url": "https://git.marcus7i.net",
+        "icon": "i-simple-icons-git",
+        "description": ""
+      },
+      {
+        "title": "Games",
+        "url": "/games",
+        "icon": "line-md:play-filled",
+        "description": ""
+      },
+      {
+        "title": "Anywave",
+        "url": "/maintenance",
+        "icon": "i-simple-icons-stremio",
+        "description": ""
+      },
+      {
+        "title": "SauceKudasai",
+        "url": "https://saucekudasai.marcus7i.net",
+        "icon": "i-simple-icons-sunrise",
+        "description": ""
+      }
+    ],
+    "games": [
+      {
+        "title": "Shanti Manti",
+        "description": "Shanti Manti has to fight against his classmates to survive.",
+        "status": "Released",
+        "logo-url": "/game-icons/shantimanti.png",
+        "url": [
+          {
+            "host": "GitHub",
+            "logo": "i-simple-icons-github",
+            "url": "https://github.com/MarcUs7i/ShantiManti"
+          },
+          {
+            "host": "Itch",
+            "logo": "i-simple-icons-itchdotio",
+            "url": "https://marcus7i.itch.io/shanti-manti"
+          }
+        ]
+      },
+      {
+        "title": "SynthMaze",
+        "description": "You have to solve the Mazes to escape from the Enemy's headquarter.",
+        "status": "Abandoned",
+        "logo-url": "/game-icons/synthmaze.png",
+        "url": [
+          {
+            "host": "GitHub",
+            "logo": "i-simple-icons-github",
+            "url": "https://github.com/MarcUs7i/SynthMaze"
+          },
+          {
+            "host": "Itch",
+            "logo": "i-simple-icons-itchdotio",
+            "url": "https://marcus7i.itch.io/synthmaze"
+          }
+        ]
+      },
+      {
+        "title": "TetrisRemastered",
+        "description": "Tetris in 2D & 3D with customizable music engine",
+        "status": "In development",
+        "logo-url": "/game-icons/tetrisremastered.png",
+        "leaderboard-api": "http://localhost:3001/leaderboard"
+      }
+    ]
+  }
