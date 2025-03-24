@@ -1,0 +1,11 @@
+services:
+  nuxt-app:
+    image: ghcr.io/marcus7i/marcus7i.net
+    container_name: marcus7i
+    restart: unless-stopped
+    ports:
+      - "9031:3000"
+    env_file:
+      - .env
+    volumes:
+      - ./logs:/app/logs
