@@ -58,8 +58,8 @@ jobs:
             docker pull ghcr.io/marcus7i/marcus7i.net:latest
             
             # Stop and start the container
-            docker-compose down
-            docker-compose up -d
+            docker compose down
+            docker compose up -d
             
             # Clean up unused images
             docker image prune -f
