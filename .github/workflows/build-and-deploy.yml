@@ -49,7 +49,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cd /var/www/marcus7i
+            cd /var/www/marcus7i.net
             
             # Create .env file with secrets
             echo "DISCORD_WEBHOOK=${{ secrets.DISCORD_WEBHOOK }}" > .env
