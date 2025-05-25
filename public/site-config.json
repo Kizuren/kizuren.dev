@@ -31,8 +31,8 @@
         "description": ""
       },
       {
-        "title": "Anywave",
-        "url": "/maintenance",
+        "title": "Otakuanime",
+        "url": "https://otakuani.me",
         "icon": "i-simple-icons-stremio",
         "description": ""
       },
@@ -84,8 +84,7 @@
         "title": "TetrisRemastered",
         "description": "Tetris in 2D & 3D with customizable music engine",
         "status": "In development",
-        "logo-url": "/game-icons/tetrisremastered.png",
-        "leaderboard-api": "http://localhost:3001/leaderboard"
+        "logo-url": "/game-icons/tetrisremastered.png"
       }
     ]
   }
