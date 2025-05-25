@@ -33,4 +33,4 @@ jobs:
         context: .
         push: true
         platforms: linux/amd64, linux/arm64/v8
-        tags: ghcr.io/marcus7i/marcus7i:${{ github.ref_name }},ghcr.io/marcus7i/marcus7i:latest
+        tags: ghcr.io/marcus7i/marcus7i.net:${{ github.ref_name }},ghcr.io/marcus7i/marcus7i.net:latest
