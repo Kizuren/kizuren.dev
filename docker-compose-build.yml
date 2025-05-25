@@ -1,5 +1,5 @@
 services:
-  nuxt-app:
+  marcus7i:
     build:
       context: .
       dockerfile: Dockerfile
