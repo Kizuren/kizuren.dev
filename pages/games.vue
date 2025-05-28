@@ -1,16 +1,16 @@
 <template>
   <div class="flex flex-col items-center justify-center gap-8 pt-8">
-    <h1 class="font-bold text-5xl text-[--ui-primary] mt-10">
+    <h1 class="font-bold text-5xl mt-10">
       Games
     </h1>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl">
+    <div class="games-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl">
       <UCard
         v-for="game in games"
         :key="game.title"
-        class="bg-gray-900 text-white shadow-lg"
+        class="big-button shadow-lg"
         :ui="{ 
-          root: 'bg-gray-900 text-white flex flex-col h-full shadow-lg rounded-lg ring-1 ring-gray-700',
+          root: 'flex flex-col shadow-lg rounded-lg ring-1',
           header: 'p-4 pb-0',
           body: 'flex-grow p-4 pt-2',
           footer: 'p-4 pt-0'
@@ -34,27 +34,25 @@
           </UBadge>
         </div>
 
-        <!-- Game Title -->
-        <h2 class="text-xl font-bold mt-4">{{ game.title }}</h2>
+        <div class="card-content">
+          <h2 class="text-xl mt-4">{{ game.title }}</h2>
+          <p class="mt-2">{{ game.description }}</p>
+        </div>
 
-        <!-- Game Description -->
-        <p class="text-gray-400 mt-2">{{ game.description }}</p>
-
-        <!-- Separator -->
-        <USeparator class="my-3" />
-
-        <!-- Game Links -->
-        <div class="flex gap-4 mt-2">
-          <a
-            v-for="link in game.url || []"
-            :key="link.url"
-            :href="link.url"
-            target="_blank"
-            class="text-blue-400 hover:text-blue-300 flex items-center gap-2 transition-colors"
-          >
-            <UIcon :name="link.logo" class="text-lg" />
-            <span class="text-sm">{{ link.host }}</span>
-          </a>
+        <div class="card-footer">
+          <USeparator class="my-3" />
+          <div class="flex gap-4 mt-2">
+            <a
+              v-for="link in game.url || []"
+              :key="link.url"
+              :href="link.url"
+              target="_blank"
+              class="flex items-center gap-2 transition-colors"
+            >
+              <UIcon :name="link.logo" class="text-lg" />
+              <span class="text-sm">{{ link.host }}</span>
+            </a>
+          </div>
         </div>
       </UCard>
     </div>
@@ -69,7 +67,7 @@ const games = siteConfig.games
 const imageCache = ref(new Map())
 
 function getBadgeColor(status: string) {
-  if (status === 'Released') return 'success'
+  if (status === 'Released') return 'pixelgreen'
   if (status === 'Abandoned') return 'error'
   return 'warning'
 }
