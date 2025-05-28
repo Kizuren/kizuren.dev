@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col items-center justify-center gap-8 pt-8">
-      <h1 class="font-bold text-5xl text-(--ui-primary) mt-10">
+      <h1 class="mt-10 home-title">
         MarcUs7i.Net
       </h1>
   
@@ -11,31 +11,32 @@
                 icon="i-simple-icons-discord"
                 to="/discord"
                 target="_blank"
+                class="green-button"
             />
 
             <UButton
                 v-if="config.siteLinks.github"
                 label="GitHub"
-                color="neutral"
                 variant="outline"
                 icon="i-simple-icons-github"
                 :to="config.siteLinks.github"
                 target="_blank"
+                class="green-button"
             />
 
             <UButton
                 v-if="config.siteLinks['status-page']"
                 label="Status"
-                color="neutral"
                 icon="i-simple-icons-statuspage"
                 :to="config.siteLinks['status-page']"
                 target="_blank"
+                class="green-button"
             />
         </UButtonGroup>
       </div>
 
-      <!-- 2x2 Grid of Smaller Buttons -->
-      <div class="grid grid-cols-2 gap-4 pt-16 max-w-3xl">
+      <!-- Responsive Grid - 1 column on mobile, 2 columns on larger screens -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-10 sm:pt-16 max-w-3xl px-4 sm:px-0">
         <UButton
             v-for="button in config.buttons"
             :key="button.url"
@@ -45,7 +46,7 @@
         >
             <div class="flex flex-col gap-2">
               <div class="flex items-center gap-3">
-                  <UIcon :name="button.icon" class="w-5 h-5 text-green-500" />
+                  <UIcon :name="button.icon" class="w-5 h-5" />
                   <span class="label">{{ button.title }}</span>
               </div>
               <span v-if="button.description" class="description">
@@ -75,17 +76,12 @@ const { config } = useSiteConfig()
   min-height: 3.5rem; /* h-48 */
   width: 100%;
   text-align: left;
+  box-shadow: 4px 4px 0 #0f0;
   border-radius: 0.5rem; /* rounded-lg */
-  border: 1px solid rgb(55, 65, 81); /* border border-gray-700 */
-  background-color: rgb(31, 41, 55); /* bg-gray-800 */
+  border: 2px solid #0f0;
+  background-color: #000;
   color: white;
   transition: all 0.3s;
-}
-
-.big-button:hover {
-  border-color: rgb(34, 197, 94); /* border-green-500 */
-  background-color: rgb(17, 24, 39); /* bg-gray-900 */
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* shadow-lg */
 }
 
 .label {
@@ -95,7 +91,7 @@ const { config } = useSiteConfig()
 }
 
 .description {
-  font-size: 0.875rem; /* text-sm */
-  color: rgb(156, 163, 175); /* text-gray-400 */
+  font-size: 0.75rem;
+  color: rgb(156, 163, 175);
 }
 </style>

@@ -10,9 +10,10 @@ export default {
     "./content/**/*.md",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        pixel: ['"Press Start 2P"', 'monospace'],
+      },
+    },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
 }

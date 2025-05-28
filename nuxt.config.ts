@@ -35,5 +35,19 @@ export default defineNuxtConfig({
     }
   },
 
-  compatibilityDate: '2025-03-22',
+  ui: {
+    theme: {
+      colors: [
+        'primary',
+        'pixelgreen',
+        'secondary',
+        'info',
+        'success',
+        'warning',
+        'error'
+      ]
+    }
+  },
+
+  compatibilityDate: '2025-05-29',
 })

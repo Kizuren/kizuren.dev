@@ -1,12 +1,12 @@
 <template>
-  <div class="flex flex-col items-center justify-center py-12 px-4">
-    <h1 class="text-3xl font-bold mb-12">Contact Me</h1>
+  <div class="flex flex-col items-center justify-center py-10 px-4">
+    <h1 class="text-3xl font-bold mb-9">Contact Me</h1>
     
     <div class="w-full max-w-2xl">
       <UForm 
         :schema="schema" 
         :state="state" 
-        class="space-y-8 bg-gray-800 p-8 rounded-lg shadow-lg" 
+        class="space-y-8 p-8 rounded-lg shadow-lg" 
         @submit="onSubmit"
       >
         <UFormField 
@@ -57,8 +57,7 @@
             type="submit" 
             :loading="isSubmitting"
             size="lg"
-            color="primary"
-            class="px-8 py-2"
+            class="green-button px-8 py-2"
           >
             Send Message
           </UButton>
@@ -69,20 +68,17 @@
 </template>
 
 <script setup lang="ts">
+import { z } from 'zod'
+
 useHead({
   title: 'Contact'
 })
-
-import { z } from 'zod'
-import type { FormSubmitEvent } from '@nuxt/ui'
 
 const schema = z.object({
   email: z.string().email({ message: 'Please enter a valid email address' }).min(1, { message: 'Email is required' }),
   subject: z.string().min(3, { message: 'Subject must be at least 3 characters' }),
   message: z.string().min(10, { message: 'Message must be at least 10 characters' })
 })
-
-type Schema = z.infer<typeof schema>
 
 const state = reactive({
   email: '',
@@ -93,7 +89,7 @@ const state = reactive({
 const isSubmitting = ref(false)
 const toast = useToast()
 
-async function onSubmit(event: FormSubmitEvent<Schema>) {
+async function onSubmit() {
   try {
     isSubmitting.value = true
     
@@ -123,14 +119,17 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       title: 'Message Sent!',
       description: 'Your message has been sent successfully.',
       icon: 'i-heroicons-check-circle',
-      color: 'success'
+      color: 'pixelgreen',
+      ui: {
+        root: '',
+      }
     })
     
     state.email = ''
     state.subject = ''
     state.message = ''
     
-  } catch (error) {
+  } catch {
     toast.add({
       title: 'Error',
       description: 'Something went wrong. Please try again.',

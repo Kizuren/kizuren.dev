@@ -1,11 +1,11 @@
 <template>
-  <div class="flex flex-col items-center justify-center min-h-screen px-4">
+  <div class="flex flex-col items-center justify-center min-h-[80vh] px-4">
     <!-- Title -->
     <h1 class="text-2xl font-bold mb-8">Redirecting to Discord...</h1>
     
     <!-- Progress bar -->
     <div class="w-full max-w-md mb-12">
-      <UProgress v-model="progress" color="primary" size="lg" />
+      <UProgress v-model="progress" color="pixelgreen" size="lg"/>
       <p class="text-center mt-2 text-sm text-gray-500">
         Redirecting in {{ Math.ceil(remainingTime) }} seconds...
       </p>
@@ -14,7 +14,7 @@
     <UButton
       size="xl"
       :to="discordLink"
-      class="mt-4 text-lg px-8 py-4"
+      class="green-button mt-4 text-lg px-8 py-4"
       icon="i-simple-icons-discord"
     >
       Don't wait - Join Now
@@ -29,7 +29,7 @@ useHead({
 
 const { config } = useSiteConfig()
 
-const discordLink = ref(config.siteLinks['discord-invite'] || 'https://discord.gg/e37aq2wc66')
+const discordLink = computed(() => config.siteLinks?.['discord-invite'] || '/maintenance')
 
 // Progress state
 const progress = ref(0)
