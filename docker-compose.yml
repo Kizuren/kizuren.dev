@@ -1,7 +1,7 @@
 services:
-  marcus7i:
-    image: ghcr.io/marcus7i/marcus7i.net
-    container_name: marcus7i
+  kizuren:
+    image: ghcr.io/kizuren/kizuren.dev
+    container_name: kizuren
     restart: unless-stopped
     ports:
       - "9031:3000"

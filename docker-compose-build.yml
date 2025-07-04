@@ -1,9 +1,9 @@
 services:
-  marcus7i:
+  kizuren:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: marcus7i
+    container_name: kizuren
     restart: unless-stopped
     ports:
       - "9031:3000"
