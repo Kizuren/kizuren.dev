@@ -2,7 +2,7 @@
     <header class="p-4">
       <nav class="flex justify-between items-center">
         <div class="logo">
-            <ULink as="button" to="/" class="cursor-default">MarcUs7i.Net</ULink>
+            <ULink as="button" to="/" class="cursor-default">Kizuren</ULink>
         </div>
         <ul class="flex gap-4 md:gap-6">
           <li><ULink to="/about">About</ULink></li>

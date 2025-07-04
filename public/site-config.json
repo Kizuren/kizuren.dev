@@ -3,24 +3,24 @@
     {
         "discord-invite": "https://discord.gg/e37aq2wc66",
         "github": "https://github.com/MarcUs7i",
-        "status-page": "https://status.marcus7i.net"
+        "status-page": "https://status.kizuren.dev"
     },
     "buttons": [
       {
         "title": "Open-WebUI",
-        "url": "https://ollama.marcus7i.net",
+        "url": "https://ollama.kizuren.dev",
         "icon": "i-simple-icons-ollama",
         "description": "Self-hosted WebUI for LLMs using Ollama"
       },
       {
         "title": "uLinkShortener",
-        "url": "https://u.marcus7i.net",
+        "url": "https://u.kizuren.dev",
         "icon": "line-md:link",
         "description": "URL shortener and data collector"
       },
       {
         "title": "Git",
-        "url": "https://git.marcus7i.net",
+        "url": "https://git.kizuren.dev",
         "icon": "i-simple-icons-git",
         "description": ""
       },
@@ -38,7 +38,7 @@
       },
       {
         "title": "SauceKudasai",
-        "url": "https://saucekudasai.marcus7i.net",
+        "url": "https://saucekudasai.kizuren.dev",
         "icon": "i-simple-icons-sunrise",
         "description": ""
       }
@@ -53,12 +53,12 @@
           {
             "host": "GitHub",
             "logo": "i-simple-icons-github",
-            "url": "https://github.com/MarcUs7i/ShantiManti"
+            "url": "https://github.com/Kizuren/ShantiManti"
           },
           {
             "host": "Itch",
             "logo": "i-simple-icons-itchdotio",
-            "url": "https://marcus7i.itch.io/shanti-manti"
+            "url": "https://kizuren.itch.io/shanti-manti"
           }
         ]
       },
@@ -71,12 +71,12 @@
           {
             "host": "GitHub",
             "logo": "i-simple-icons-github",
-            "url": "https://github.com/MarcUs7i/SynthMaze"
+            "url": "https://github.com/Kizuren/SynthMaze"
           },
           {
             "host": "Itch",
             "logo": "i-simple-icons-itchdotio",
-            "url": "https://marcus7i.itch.io/synthmaze"
+            "url": "https://kizuren.itch.io/synthmaze"
           }
         ]
       },

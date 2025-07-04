@@ -1,8 +1,12 @@
 <template>
     <div class="flex flex-col items-center justify-center gap-8 pt-8">
       <h1 class="mt-10 home-title">
-        MarcUs7i.Net
+        Kizuren.dev
       </h1>
+
+      <p class="text-center text-sm sm:text-base mb-2">
+        For the latest updates, join the <ULink to="/discord" class="text-pixel-green hover:text-pixel-green-hover">discord server</ULink>
+      </p>
   
       <div class="flex items-center gap-2 mt-6">
         <UButtonGroup>
@@ -60,7 +64,7 @@
 
 <script setup>
 useHead({
-  title: 'Marcus7i.Net'
+  title: 'Kizuren'
 })
 
 const { config } = useSiteConfig()
