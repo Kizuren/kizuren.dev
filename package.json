@@ -36,9 +36,5 @@
     "@iconify-json/simple-icons": "^1.2.29",
     "@nuxtjs/mdc": "^0.16.1",
     "@tailwindcss/typography": "^0.5.16"
-  },
-  "trustedDependencies": [
-    "@parcel/watcher",
-    "@tailwindcss/oxide"
-  ]
+  }
 }
