@@ -22,6 +22,7 @@
     "@tailwindcss/vite": "^4.0.15",
     "@unhead/vue": "^2.0.0-rc.8",
     "animate.css": "^4.1.1",
+    "better-sqlite3": "^12.2.0",
     "eslint": "^9.23.0",
     "nuxt": "^3.16.1",
     "sass": "^1.86.0",
@@ -35,5 +36,9 @@
     "@iconify-json/simple-icons": "^1.2.29",
     "@nuxtjs/mdc": "^0.16.1",
     "@tailwindcss/typography": "^0.5.16"
-  }
+  },
+  "trustedDependencies": [
+    "@parcel/watcher",
+    "@tailwindcss/oxide"
+  ]
 }
