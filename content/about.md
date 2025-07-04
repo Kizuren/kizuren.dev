@@ -1,15 +1,15 @@
 ---
 title: 'About'
-description: 'about page of marcus7i.net'
+description: 'about page of kizuren.dev'
 ---
 
-# About MarcUs7i.Net
+# About Kizuren
 
-This site hosts multiple services and applications, mostly self-made, some improved by me (MarcUs7i)
+This site hosts multiple services and applications, mostly self-made, some improved by me (Kizuren)
 
 ## Donations
 
-You can support me by donating to my [Patreon](https://patreon.com/marcus7i).
+You can support me by donating to my [Patreon](https://patreon.com/kizuren).
 
 ## Contact
 
