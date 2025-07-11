@@ -25,9 +25,9 @@ export default defineNuxtConfig({
   
   app: {
     head: {
-      title: 'MarcUs7i.Net',
+      title: 'Kizuren',
       meta: [
-        { name: 'description', content: 'The official site for MarcUs7i.Net' }
+        { name: 'description', content: 'The official site for Kizuren.dev' }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
