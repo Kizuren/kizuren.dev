@@ -13,7 +13,7 @@
         "description": "Self-hosted WebUI for LLMs using Ollama"
       },
       {
-        "title": "uLinkShortener",
+        "title": "µLinkShortener",
         "url": "https://u.kizuren.dev",
         "icon": "line-md:link",
         "description": "URL shortener and data collector"
