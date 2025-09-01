@@ -17,7 +17,7 @@ COPY --from=builder /app/.output /app/.output
 COPY --from=builder /app/package.json ./
 COPY --from=builder /app/bun.lock ./
 
-RUN bun install --production
+RUN bun install
 EXPOSE 3000
 
 CMD ["bun", ".output/server/index.mjs"]
