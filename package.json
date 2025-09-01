@@ -10,30 +10,35 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/content": "^3.4.0",
-    "@nuxt/eslint": "^1.2.0",
-    "@nuxt/fonts": "^0.11.0",
-    "@nuxt/icon": "^1.11.0",
-    "@nuxt/image": "^1.10.0",
-    "@nuxt/scripts": "^0.11.2",
-    "@nuxt/test-utils": "^3.17.2",
-    "@nuxt/ui": "^3.0.1",
-    "@tailwindcss/postcss": "^4.0.15",
-    "@tailwindcss/vite": "^4.0.15",
-    "@unhead/vue": "^2.0.0-rc.8",
+    "@nuxt/content": "^3.6.3",
+    "@nuxt/eslint": "^1.9.0",
+    "@nuxt/fonts": "^0.11.4",
+    "@nuxt/icon": "^1.15.0",
+    "@nuxt/image": "^1.11.0",
+    "@nuxt/scripts": "^0.11.13",
+    "@nuxt/test-utils": "^3.19.2",
+    "@nuxt/ui": "^3.3.3",
+    "@tailwindcss/postcss": "^4.1.12",
+    "@tailwindcss/vite": "^4.1.12",
+    "@unhead/vue": "^2.0.14",
     "animate.css": "^4.1.1",
-    "eslint": "^9.23.0",
-    "nuxt": "^3.16.1",
-    "sass": "^1.86.0",
-    "tailwindcss": "^4.0.15",
-    "typescript": "^5.8.2",
-    "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "eslint": "^9.34.0",
+    "nuxt": "^3.18.1",
+    "sass": "^1.91.0",
+    "tailwindcss": "^4.1.12",
+    "typescript": "^5.9.2",
+    "vue": "^3.5.20",
+    "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@iconify-json/material-symbols": "^1.2.17",
-    "@iconify-json/simple-icons": "^1.2.29",
+    "@iconify-json/material-symbols": "^1.2.33",
+    "@iconify-json/simple-icons": "^1.2.50",
     "@nuxtjs/mdc": "^0.16.1",
     "@tailwindcss/typography": "^0.5.16"
-  }
+  },
+  "trustedDependencies": [
+    "@parcel/watcher",
+    "@tailwindcss/oxide",
+    "unrs-resolver"
+  ]
 }
