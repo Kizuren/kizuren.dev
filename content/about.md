@@ -9,7 +9,7 @@ This site hosts multiple services and applications, mostly self-made, some impro
 
 ## Donations
 
-You can support me by donating to my [Patreon](https://patreon.com/kizuren).
+You can support me by donating to my [Patreon](https://patreon.com/kizuren) or [SellApp](https://kizuren.sell.app)
 
 ## Contact
 
