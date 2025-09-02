@@ -1,7 +1,10 @@
 services:
-  kizuren:
+  kizurendev:
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: ghcr.io/kizuren/kizuren.dev
-    container_name: kizuren
+    container_name: kizurendev
     restart: unless-stopped
     ports:
       - "9031:3000"
