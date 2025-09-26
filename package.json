@@ -23,7 +23,7 @@
     "@unhead/vue": "^2.0.14",
     "animate.css": "^4.1.1",
     "better-sqlite3": "^12.2.0",
-    "eslint": "^9.34.0",
+    "eslint": "^9.36.0",
     "nuxt": "^4.0.3",
     "sass": "^1.91.0",
     "tailwindcss": "^4.1.12",
