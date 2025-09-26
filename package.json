@@ -40,6 +40,10 @@
   "trustedDependencies": [
     "@parcel/watcher",
     "@tailwindcss/oxide",
-    "unrs-resolver"
+    "better-sqlite3",
+    "esbuild",
+    "sharp",
+    "unrs-resolver",
+    "vue-demi"
   ]
 }
