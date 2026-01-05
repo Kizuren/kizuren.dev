@@ -2,7 +2,6 @@
 import type { NuxtError } from '#app'
 
 const props = defineProps({
-  // eslint-disable-next-line vue/require-default-prop
   error: Object as () => NuxtError
 })
 </script>
