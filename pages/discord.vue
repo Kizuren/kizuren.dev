@@ -24,39 +24,39 @@
 
 <script setup>
 useHead({
-  title: 'Discord'
-})
+  title: 'Discord',
+});
 
-const { config } = useSiteConfig()
+const { config } = useSiteConfig();
 
-const discordLink = computed(() => config.siteLinks?.['discord-invite'] || '/maintenance')
+const discordLink = computed(() => config.siteLinks?.['discord-invite'] || '/maintenance');
 
 // Progress state
-const progress = ref(0)
-const totalTime = 3 // seconds
-const remainingTime = ref(totalTime)
-const interval = 50 // ms
+const progress = ref(0);
+const totalTime = 3; // seconds
+const remainingTime = ref(totalTime);
+const interval = 50; // ms
 
-let timer
+let timer;
 
 onMounted(() => {
-  const startTime = Date.now()
-  
-  timer = setInterval(() => {
-    const elapsed = (Date.now() - startTime) / 1000
-    remainingTime.value = Math.max(0, totalTime - elapsed)
+  const startTime = Date.now();
 
-    const rawProgress = (elapsed / totalTime) * 100
-    progress.value = Math.min(100, Math.max(0, Math.round(rawProgress)))
-    
+  timer = setInterval(() => {
+    const elapsed = (Date.now() - startTime) / 1000;
+    remainingTime.value = Math.max(0, totalTime - elapsed);
+
+    const rawProgress = (elapsed / totalTime) * 100;
+    progress.value = Math.min(100, Math.max(0, Math.round(rawProgress)));
+
     if (elapsed >= totalTime) {
-      clearInterval(timer)
-      window.location.href = discordLink.value
+      clearInterval(timer);
+      window.location.href = discordLink.value;
     }
-  }, interval)
-})
+  }, interval);
+});
 
 onBeforeUnmount(() => {
-  if (timer) clearInterval(timer)
-})
+  if (timer) clearInterval(timer);
+});
 </script>

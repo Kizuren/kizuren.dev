@@ -64,10 +64,10 @@
 
 <script setup>
 useHead({
-  title: 'Kizuren'
-})
+  title: 'Kizuren',
+});
 
-const { config } = useSiteConfig()
+const { config } = useSiteConfig();
 </script>
 
 <style>

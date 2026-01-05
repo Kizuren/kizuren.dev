@@ -9,44 +9,30 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/scripts',
     '@nuxt/test-utils',
-    '@nuxt/ui'
+    '@nuxt/ui',
   ],
 
-  css: [
-    "~/assets/main.css"
-  ],
-  
+  css: ['~/assets/main.css'],
+
   colorMode: {
     preference: 'system',
     fallback: 'dark',
     classSuffix: '',
   },
-  
+
   app: {
     head: {
       title: 'Kizuren',
-      meta: [
-        { name: 'description', content: 'The official site for Kizuren.dev' }
-      ],
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-      ]
-    }
+      meta: [{ name: 'description', content: 'The official site for Kizuren.dev' }],
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    },
   },
 
   ui: {
     theme: {
-      colors: [
-        'primary',
-        'pixelgreen',
-        'secondary',
-        'info',
-        'success',
-        'warning',
-        'error'
-      ]
-    }
+      colors: ['primary', 'pixelgreen', 'secondary', 'info', 'success', 'warning', 'error'],
+    },
   },
 
   compatibilityDate: '2025-05-29',
-})
+});

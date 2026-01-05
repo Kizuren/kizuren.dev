@@ -68,52 +68,57 @@
 </template>
 
 <script setup lang="ts">
-import { z } from 'zod'
+import { z } from 'zod';
 
 useHead({
-  title: 'Contact'
-})
+  title: 'Contact',
+});
 
 const schema = z.object({
-  email: z.string().email({ message: 'Please enter a valid email address' }).min(1, { message: 'Email is required' }),
+  email: z
+    .string()
+    .email({ message: 'Please enter a valid email address' })
+    .min(1, { message: 'Email is required' }),
   subject: z.string().min(3, { message: 'Subject must be at least 3 characters' }),
-  message: z.string().min(10, { message: 'Message must be at least 10 characters' })
-})
+  message: z.string().min(10, { message: 'Message must be at least 10 characters' }),
+});
 
 const state = reactive({
   email: '',
   subject: '',
-  message: ''
-})
+  message: '',
+});
 
-const isSubmitting = ref(false)
-const toast = useToast()
+const isSubmitting = ref(false);
+const toast = useToast();
 
 async function onSubmit() {
   try {
-    isSubmitting.value = true
-    
+    isSubmitting.value = true;
+
     const discordMessage = {
-      embeds: [{
-        title: `Contact Form: ${state.subject}`,
-        description: state.message,
-        color: 3447003, // Blue
-        fields: [
-          {
-            name: 'Email',
-            value: state.email
-          }
-        ],
-        timestamp: new Date().toISOString()
-      }]
-    }
-    
+      embeds: [
+        {
+          title: `Contact Form: ${state.subject}`,
+          description: state.message,
+          color: 3447003, // Blue
+          fields: [
+            {
+              name: 'Email',
+              value: state.email,
+            },
+          ],
+          timestamp: new Date().toISOString(),
+        },
+      ],
+    };
+
     await $fetch('/api/send-contact', {
       method: 'POST',
-      body: { 
-        message: discordMessage
-      }
-    })
+      body: {
+        message: discordMessage,
+      },
+    });
 
     toast.add({
       title: 'Message Sent!',
@@ -122,22 +127,21 @@ async function onSubmit() {
       color: 'pixelgreen',
       ui: {
         root: '',
-      }
-    })
-    
-    state.email = ''
-    state.subject = ''
-    state.message = ''
-    
+      },
+    });
+
+    state.email = '';
+    state.subject = '';
+    state.message = '';
   } catch {
     toast.add({
       title: 'Error',
       description: 'Something went wrong. Please try again.',
       icon: 'i-heroicons-exclamation-circle',
-      color: 'error'
-    })
+      color: 'error',
+    });
   } finally {
-    isSubmitting.value = false
+    isSubmitting.value = false;
   }
 }
 </script>
