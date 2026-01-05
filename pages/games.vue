@@ -60,68 +60,68 @@
 </template>
 
 <script lang="ts" setup>
-import siteConfig from '~/public/site-config.json'
-import { ref, onMounted } from 'vue'
+import siteConfig from '~/public/site-config.json';
+import { ref, onMounted } from 'vue';
 
-const games = siteConfig.games
-const imageCache = ref(new Map())
+const games = siteConfig.games;
+const imageCache = ref(new Map());
 
 function getBadgeColor(status: string) {
-  if (status === 'Released') return 'pixelgreen'
-  if (status === 'Abandoned') return 'error'
-  return 'warning'
+  if (status === 'Released') return 'pixelgreen';
+  if (status === 'Abandoned') return 'error';
+  return 'warning';
 }
 
 // Check if image exists and cache result
 function getImageSrc(game: { [x: string]: any }) {
   // During SSR, just return the URL or fallback
   if (typeof window === 'undefined') {
-    return game['logo-url'] || '/cancel.svg'
+    return game['logo-url'] || '/cancel.svg';
   }
-  
-  const url = game['logo-url']
-  
+
+  const url = game['logo-url'];
+
   // If no URL or already checked and failed, use cancel.svg
   if (!url || imageCache.value.get(url) === false) {
-    return '/cancel.svg'
+    return '/cancel.svg';
   }
-  
+
   // If not checked yet, check it now
   if (!imageCache.value.has(url)) {
-    checkImage(url)
+    checkImage(url);
   }
-  
-  return url
+
+  return url;
 }
 
 // Function to check if image exists
 function checkImage(url: string | null) {
   // Skip this function if not in browser or url is null
-  if (typeof window === 'undefined' || url === null) return
-  
-  const img = new window.Image()
+  if (typeof window === 'undefined' || url === null) return;
+
+  const img = new window.Image();
   img.onload = () => {
-    imageCache.value.set(url, true)
-  }
+    imageCache.value.set(url, true);
+  };
   img.onerror = () => {
-    imageCache.value.set(url, false)
+    imageCache.value.set(url, false);
     // Force a component update for this URL
-    const affectedGames = games.filter(g => g['logo-url'] === url)
+    const affectedGames = games.filter(g => g['logo-url'] === url);
     if (affectedGames.length) {
       // This will trigger a re-render
-      imageCache.value = new Map(imageCache.value)
+      imageCache.value = new Map(imageCache.value);
     }
-  }
-  img.src = url
+  };
+  img.src = url;
 }
 
 function handleImageError(event: Event) {
-  const img = event.target as HTMLImageElement
-  img.src = '/cancel.svg'
-  
+  const img = event.target as HTMLImageElement;
+  img.src = '/cancel.svg';
+
   // Also cache this failure for future renders
   if (img.dataset.originalSrc) {
-    imageCache.value.set(img.dataset.originalSrc, false)
+    imageCache.value.set(img.dataset.originalSrc, false);
   }
 }
 
@@ -129,12 +129,12 @@ function handleImageError(event: Event) {
 onMounted(() => {
   games.forEach(game => {
     if (game['logo-url']) {
-      checkImage(game['logo-url'])
+      checkImage(game['logo-url']);
     }
-  })
-})
+  });
+});
 
 useHead({
-  title: 'Games'
-})
+  title: 'Games',
+});
 </script>

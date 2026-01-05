@@ -19,8 +19,8 @@
 
 <script setup>
 useHead({
-  title: 'Maintenance'
-})
+  title: 'Maintenance',
+});
 </script>
 
 <style scoped>

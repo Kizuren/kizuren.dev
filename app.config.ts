@@ -7,53 +7,51 @@ export default defineAppConfig({
       compoundVariants: [
         {
           color: 'pixelgreen',
-          variant: [
-            'outline',
-            'subtle'
-          ],
-          class: 'focus-visible:ring-2 focus-visible:ring-inset ring-pixelgreen focus-visible:ring-pixelgreen'
-        }
+          variant: ['outline', 'subtle'],
+          class:
+            'focus-visible:ring-2 focus-visible:ring-inset ring-pixelgreen focus-visible:ring-pixelgreen',
+        },
       ],
       variants: {
         variant: {
           outline: 'text-highlighted bg-black ring ring-inset ring-accented',
           soft: 'text-highlighted bg-elevated/50 hover:bg-elevated focus:bg-elevated disabled:bg-elevated/50',
           subtle: 'text-highlighted bg-elevated ring ring-inset ring-accented',
-          ghost: 'text-highlighted bg-transparent hover:bg-elevated focus:bg-elevated disabled:bg-transparent dark:disabled:bg-transparent',
-          none: 'text-highlighted bg-transparent'
+          ghost:
+            'text-highlighted bg-transparent hover:bg-elevated focus:bg-elevated disabled:bg-transparent dark:disabled:bg-transparent',
+          none: 'text-highlighted bg-transparent',
         },
       },
       defaultVariants: {
         size: 'md',
         color: 'pixelgreen',
-        variant: 'outline'
-      }
+        variant: 'outline',
+      },
     },
     textarea: {
       compoundVariants: [
         {
           color: 'pixelgreen',
-          variant: [
-            'outline',
-            'subtle'
-          ],
-          class: 'focus-visible:ring-2 focus-visible:ring-inset ring-pixelgreen focus-visible:ring-pixelgreen'
-        }
+          variant: ['outline', 'subtle'],
+          class:
+            'focus-visible:ring-2 focus-visible:ring-inset ring-pixelgreen focus-visible:ring-pixelgreen',
+        },
       ],
       variants: {
         variant: {
           outline: 'text-highlighted bg-black ring ring-inset ring-accented',
           soft: 'text-highlighted bg-elevated/50 hover:bg-elevated focus:bg-elevated disabled:bg-elevated/50',
           subtle: 'text-highlighted bg-elevated ring ring-inset ring-accented',
-          ghost: 'text-highlighted bg-transparent hover:bg-elevated focus:bg-elevated disabled:bg-transparent dark:disabled:bg-transparent',
-          none: 'text-highlighted bg-transparent'
+          ghost:
+            'text-highlighted bg-transparent hover:bg-elevated focus:bg-elevated disabled:bg-transparent dark:disabled:bg-transparent',
+          none: 'text-highlighted bg-transparent',
         },
       },
       defaultVariants: {
         size: 'md',
         color: 'pixelgreen',
-        variant: 'outline'
-      }
+        variant: 'outline',
+      },
     },
     toast: {
       slots: {
@@ -64,13 +62,13 @@ export default defineAppConfig({
           pixelgreen: {
             root: 'focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-pixelgreen',
             icon: 'text-pixelgreen',
-            progress: 'bg-pixelgreen'
-          }
+            progress: 'bg-pixelgreen',
+          },
         },
       },
       defaultVariants: {
-        color: 'pixelgreen'
-      }
-    }
-  }
-})
+        color: 'pixelgreen',
+      },
+    },
+  },
+});

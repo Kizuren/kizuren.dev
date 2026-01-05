@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-const route = useRoute()
+const route = useRoute();
 const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection('content').path(route.path).first()
-})
+  return queryCollection('content').path(route.path).first();
+});
 
 useHead(() => ({
-  title: page.value?.title || 'About'
-}))
+  title: page.value?.title || 'About',
+}));
 </script>
 
 <template>
