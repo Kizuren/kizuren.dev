@@ -5,7 +5,7 @@
             <ULink as="button" to="/" class="cursor-default">Kizuren</ULink>
         </div>
         <ul class="flex gap-4 md:gap-6">
-          <li><ULink to="/about">About</ULink></li>
+          <li><ULink to="/hire">Hire</ULink></li>
           <li><ULink to="/contact">Contact</ULink></li>
           <!--<li v-if="config.siteLinks.github"><ULink :to="config.siteLinks.github" target="_blank"><UIcon name="i-simple-icons-github" class="size-5" /></ULink></li>
         <li><ULink to="/discord" target="_blank"><UIcon name="i-simple-icons-discord" class="size-5" /></ULink></li>-->

@@ -1,8 +1,31 @@
 <template>
   <div class="flex flex-col items-center justify-center py-10 px-4">
-    <h1 class="text-3xl font-bold mb-9">Contact Me</h1>
+    <h1 class="text-3xl font-bold mb-9">Contact</h1>
+
+    <div class="flex items-center gap-2 mt-6">
+        <UButtonGroup>
+            <UButton
+                v-if="config.siteLinks['discord-account']"
+                label="Discord"
+                variant="outline"
+                icon="i-simple-icons-discord"
+                :to="config.siteLinks['discord-account']"
+                target="_blank"
+                class="green-button"
+            />
+
+            <UButton
+                label="Mail"
+                variant="outline"
+                icon="line-md:email"
+                to="mailto:info@kizuren.dev"
+                target="_blank"
+                class="green-button"
+            />
+        </UButtonGroup>
+      </div>
     
-    <div class="w-full max-w-2xl">
+    <div class="w-full max-w-2xl mt-6">
       <UForm 
         :schema="schema" 
         :state="state" 
@@ -71,8 +94,10 @@
 import { z } from 'zod';
 
 useHead({
-  title: 'Contact',
+  title: 'Contact - Kizuren',
 });
+
+const { config } = useSiteConfig();
 
 const schema = z.object({
   email: z
@@ -96,27 +121,12 @@ async function onSubmit() {
   try {
     isSubmitting.value = true;
 
-    const discordMessage = {
-      embeds: [
-        {
-          title: `Contact Form: ${state.subject}`,
-          description: state.message,
-          color: 3447003, // Blue
-          fields: [
-            {
-              name: 'Email',
-              value: state.email,
-            },
-          ],
-          timestamp: new Date().toISOString(),
-        },
-      ],
-    };
-
     await $fetch('/api/send-contact', {
       method: 'POST',
       body: {
-        message: discordMessage,
+        email: state.email,
+        subject: state.subject,
+        message: state.message,
       },
     });
 

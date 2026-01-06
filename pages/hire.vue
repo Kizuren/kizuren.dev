@@ -5,7 +5,7 @@ const { data: page } = await useAsyncData(route.path, () => {
 });
 
 useHead(() => ({
-  title: page.value?.title || 'About',
+  title: page.value?.title || 'Hire Me - Kizuren',
 }));
 </script>
 
