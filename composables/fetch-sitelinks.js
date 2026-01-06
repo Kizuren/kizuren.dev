@@ -26,12 +26,15 @@ export function useSiteConfig() {
 
       const data = await response.json();
 
-      if (!data['site-links'] && !data.buttons) {
+      if (!data['site-links'] && !data.projects) {
         throw new Error('Invalid configuration format: Missing required fields');
       }
 
       config.siteLinks = data['site-links'] || {};
-      config.buttons = data.buttons || [];
+      config.projects = data.projects || [];
+      config.hosted = data.hosted || [];
+      config.games = data.games || [];
+      config.teams = data.teams || [];
 
       error.value = null;
     } catch (err) {

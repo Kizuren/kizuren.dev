@@ -1,39 +1,57 @@
 {
   "site-links": {
+    "discord-account": "https://discord.com/users/1037818849841655818",
     "discord-invite": "https://discord.gg/e37aq2wc66",
     "github": "https://github.com/Kizuren",
     "status-page": "https://status.kizuren.dev"
   },
-  "buttons": [
+  "projects": [
     {
-      "title": "Otakuanime",
-      "url": "https://otakuani.me",
-      "icon": "i-simple-icons-stremio",
-      "description": "An anime site to watch for free"
+      "title": "Homepage",
+      "url": "https://kizuren.dev",
+      "github": "https://github.com/Kizuren/kizuren.dev",
+      "icon": "heroicons:globe-alt",
+      "description": "This very site"
     },
     {
       "title": "µLinkShortener",
       "url": "https://u.kizuren.dev",
+      "github": "https://github.com/Kizuren/uLinkShortener",
       "icon": "line-md:link",
       "description": "URL shortener and data collector"
+    },
+    {
+      "title": "QuizConnect",
+      "url": "https://github.com/Kizuren/QuizConnect",
+      "github": "https://github.com/Kizuren/QuizConnect",
+      "icon": "heroicons:globe-alt",
+      "description": "A small Quiz platform"
+    },
+    {
+      "title": "Keygenmusic-api",
+      "url": "https://keygenmusic.kizuren.dev/docs",
+      "icon": "line-md:downloading",
+      "description": "An API to fetch data and download keygenmusic"
+    }
+  ],
+  "hosted": [
+    {
+      "title": "Status",
+      "url": "https://status.kizuren.dev",
+      "icon": "i-simple-icons-statuspage",
+      "description": "The status page"
+    },
+    {
+      "title": "Vencloud",
+      "url": "https://vencloud.kizuren.dev",
+      "icon": "heroicons:globe-alt",
+      "description": "Self-hosted vencloud instance"
     },
     {
       "title": "Git",
       "url": "https://git.kizuren.dev",
       "icon": "i-simple-icons-git",
       "description": "Self-hosted Git instance"
-    },
-    {
-      "title": "Games",
-      "url": "/games",
-      "icon": "line-md:play-filled",
-      "description": ""
-    },
-    {
-      "title": "SauceKudasai",
-      "url": "https://saucekudasai.kizuren.dev",
-      "icon": "i-simple-icons-sunrise",
-      "description": "Find a specific anime from a screenshot"
     },
     {
       "title": "Open-WebUI",
@@ -47,7 +65,7 @@
       "title": "Shanti Manti",
       "description": "Shanti Manti has to fight against his classmates to survive.",
       "status": "Released",
-      "logo-url": "/game-icons/shantimanti.png",
+      "logo": "/icons/game/shantimanti.png",
       "url": [
         {
           "host": "GitHub",
@@ -65,7 +83,7 @@
       "title": "SynthMaze",
       "description": "You have to solve the Mazes to escape from the Enemy's headquarter.",
       "status": "Abandoned",
-      "logo-url": "/game-icons/synthmaze.png",
+      "logo": "/icons/game/synthmaze.png",
       "url": [
         {
           "host": "GitHub",
@@ -83,7 +101,33 @@
       "title": "TetrisRemastered",
       "description": "Tetris in 2D & 3D with customizable music engine",
       "status": "In development",
-      "logo-url": "/game-icons/tetrisremastered.png"
+      "logo": "/icons/game/tetrisremastered.png"
+    }
+  ],
+  "teams": [
+    {
+      "title": "Crysoline",
+      "description": "An independent team scraping anime video streams",
+      "url": "https://crysoline.moe",
+      "logo": "/icons/team/crysoline.svg"
+    },
+    {
+      "title": "OtakuAni",
+      "description": "A small team working on a free anime site",
+      "url": "https://otakuani.me",
+      "logo": "/icons/team/otakuani.svg"
+    },
+    {
+      "title": "ZaoCore",
+      "description": "A company working with the anime and developer community. (Owns 1Anime & DevX)",
+      "url": "https://zaocore.com",
+      "logo": "/icons/team/zaocore.svg"
+    },
+    {
+      "title": "Zenkuro",
+      "description": "A team working on privacy-focused projects",
+      "url": "https://zenkuro.net",
+      "logo": "/icons/team/zenkuro.svg"
     }
   ]
 }

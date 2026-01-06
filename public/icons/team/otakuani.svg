@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 532 532">
+  <!-- Generator: Adobe Illustrator 29.7.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 8)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <polygon id="PlayButton" class="st0" points="226.85 190.7 346.85 259.98 226.85 329.26 226.85 190.7"/>
+  <g id="Circle">
+    <path id="_x38_" class="st0" d="M165,32c-57,24-105,69-131,127l248-46"/>
+    <path id="_x37_" class="st0" d="M29.12,171.95c-23.33,57.28-25.46,123.04-2.83,182.43l142.84-207.89"/>
+    <path id="_x36_" class="st0" d="M32,367c24,57,69,105,127,131l-46-248"/>
+    <path id="_x35_" class="st0" d="M171.95,502.88c57.28,23.33,123.04,25.46,182.43,2.83l-207.89-142.84"/>
+    <path id="_x34_" class="st0" d="M367,500c57-24,105-69,131-127l-248,46"/>
+    <path id="_x33_" class="st0" d="M502.88,360.05c23.33-57.28,25.46-123.04,2.83-182.43l-142.84,207.89"/>
+    <path id="_x32_" class="st0" d="M500,165c-24-57-69-105-127-131l46,248"/>
+    <path id="_x31_" class="st0" d="M360.05,29.12c-57.28-23.33-123.04-25.46-182.43-2.83l207.89,142.84"/>
+  </g>
+</svg>
