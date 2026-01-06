@@ -1,9 +1,11 @@
 FROM node:22-alpine AS build
 WORKDIR /app
-COPY package*.json ./
-RUN npm ci
+RUN npm install -g bun
+RUN apk add --no-cache git netcat-openbsd
+COPY package*.json bun.lock* ./
+RUN bun i
 COPY . .
-RUN npm run build
+RUN bun run build
 
 FROM node:22-alpine
 WORKDIR /app
