@@ -3,7 +3,7 @@ import { ref, reactive, onMounted } from 'vue';
 // Shared state to prevent multiple toasts
 let toastShown = false;
 
-export function useSiteConfig() {
+export function useSiteLinks() {
   const config = reactive({
     siteLinks: {},
     buttons: [],

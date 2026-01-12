@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxt/test-utils',
     '@nuxt/ui',
+    '@nuxtjs/sitemap',
   ],
 
   css: ['~/assets/main.css'],
