@@ -73,7 +73,7 @@ useHead({
   title: 'Home - Kizuren',
 });
 
-const { config } = useSiteConfig();
+const { config } = useSiteLinks();
 </script>
 
 <style>

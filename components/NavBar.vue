@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-const { config } = useSiteConfig();
+const { config } = useSiteLinks();
 </script>
 
 <style scoped>

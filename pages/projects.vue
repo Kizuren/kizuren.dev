@@ -180,7 +180,7 @@ useHead({
   title: 'Projects - Kizuren',
 });
 
-const { config } = useSiteConfig();
+const { config } = useSiteLinks();
 
 const sections = [
   { id: 'projects', name: 'Projects' },

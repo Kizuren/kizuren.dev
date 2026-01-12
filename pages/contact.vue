@@ -97,7 +97,7 @@ useHead({
   title: 'Contact - Kizuren',
 });
 
-const { config } = useSiteConfig();
+const { config } = useSiteLinks();
 
 const schema = z.object({
   email: z
