@@ -1,14 +1,14 @@
 <template>
   <div class="flex flex-col items-center justify-center gap-8 pt-8 pb-12">
     <h1 class="mt-10 home-title">
-      Projects
+      {{ t.projectsPage.title }}
     </h1>
 
     <div class="flex items-center gap-2 mt-6">
       <UButtonGroup>
         <UButton
           v-if="config.siteLinks.github"
-          label="GitHub"
+          :label="t.projectsPage.github"
           variant="outline"
           icon="i-simple-icons-github"
           :to="config.siteLinks.github"
@@ -18,7 +18,7 @@
 
         <UButton
           v-if="config.siteLinks['status-page']"
-          label="Status"
+          :label="t.projectsPage.status"
           icon="i-simple-icons-statuspage"
           :to="config.siteLinks['status-page']"
           target="_blank"
@@ -42,7 +42,7 @@
 
       <!-- Projects Section -->
       <section id="projects" class="mb-16">
-        <h2 class="text-3xl font-bold mb-6">My Projects</h2>
+        <h2 class="text-3xl font-bold mb-6">{{ t.projectsPage.myProjects }}</h2>
         <div class="space-y-3">
           <a
             v-for="project in config.projects"
@@ -65,7 +65,7 @@
 
       <!-- Hosted Section -->
       <section id="hosted" class="mb-16">
-        <h2 class="text-3xl font-bold mb-6">Hosted Services</h2>
+        <h2 class="text-3xl font-bold mb-6">{{ t.projectsPage.hostedServices }}</h2>
         <div class="space-y-3">
           <a
             v-for="service in config.hosted"
@@ -88,7 +88,7 @@
 
       <!-- Games Section -->
       <section id="games" class="mb-16">
-        <h2 class="text-3xl font-bold mb-6">Games</h2>
+        <h2 class="text-3xl font-bold mb-6">{{ t.projectsPage.games }}</h2>
         <div class="games-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <UCard
             v-for="game in config.games"
@@ -145,7 +145,7 @@
 
       <!-- Teams Section -->
       <section id="teams" class="mb-16">
-        <h2 class="text-3xl font-bold mb-6">Teams</h2>
+        <h2 class="text-3xl font-bold mb-6">{{ t.projectsPage.teams }}</h2>
         <div class="space-y-3">
           <a
             v-for="team in config.teams"
@@ -176,18 +176,20 @@
 <script setup>
 import { ref, onMounted, nextTick, watch } from 'vue';
 
+const { t } = useTranslations();
+
 useHead({
   title: 'Projects - Kizuren',
 });
 
 const { config } = useSiteLinks();
 
-const sections = [
-  { id: 'projects', name: 'Projects' },
-  { id: 'hosted', name: 'Hosted' },
-  { id: 'games', name: 'Games' },
-  { id: 'teams', name: 'Teams' },
-];
+const sections = computed(() => [
+  { id: 'projects', name: t.value.projectsPage.myProjects },
+  { id: 'hosted', name: t.value.projectsPage.hostedServices },
+  { id: 'games', name: t.value.projectsPage.games },
+  { id: 'teams', name: t.value.projectsPage.teams },
+]);
 
 const imageCache = ref(new Map());
 

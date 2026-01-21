@@ -1,12 +1,12 @@
 <template>
   <div class="flex flex-col items-center justify-center py-10 px-4">
-    <h1 class="text-3xl font-bold mb-9">Contact</h1>
+    <h1 class="text-3xl font-bold mb-9">{{ t.contactPage.title }}</h1>
 
     <div class="flex items-center gap-2 mt-6">
         <UButtonGroup>
             <UButton
                 v-if="config.siteLinks['discord-account']"
-                label="Discord"
+                :label="t.contactPage.discord"
                 variant="outline"
                 icon="i-simple-icons-discord"
                 :to="config.siteLinks['discord-account']"
@@ -15,7 +15,7 @@
             />
 
             <UButton
-                label="Mail"
+                :label="t.contactPage.mail"
                 variant="outline"
                 icon="line-md:email"
                 to="mailto:info@kizuren.dev"
@@ -33,42 +33,42 @@
         @submit="onSubmit"
       >
         <UFormField 
-          label="Email Address" 
+          :label="t.contactPage.emailLabel" 
           name="email" 
           required 
           class="mb-8"
         >
           <UInput 
             v-model="state.email" 
-            placeholder="your.email@example.com"
+            :placeholder="t.contactPage.emailPlaceholder"
             size="lg"
             class="w-full" 
           />
         </UFormField>
         
         <UFormField 
-          label="Message Subject" 
+          :label="t.contactPage.subjectLabel" 
           name="subject" 
           required 
           class="mb-8"
         >
           <UInput 
             v-model="state.subject" 
-            placeholder="What is this about?"
+            :placeholder="t.contactPage.subjectPlaceholder"
             size="xl"
             class="w-full text-lg" 
           />
         </UFormField>
         
         <UFormField 
-          label="Your Message" 
+          :label="t.contactPage.messageLabel" 
           name="message" 
           required 
           class="mb-8"
         >
           <UTextarea 
             v-model="state.message" 
-            placeholder="Your message here..." 
+            :placeholder="t.contactPage.messagePlaceholder" 
             :rows="8"
             size="lg"
             class="w-full" 
@@ -82,7 +82,7 @@
             size="lg"
             class="green-button px-8 py-2"
           >
-            Send Message
+            {{ t.contactPage.sendButton }}
           </UButton>
         </div>
       </UForm>
@@ -93,20 +93,22 @@
 <script setup lang="ts">
 import { z } from 'zod';
 
+const { t } = useTranslations();
+
 useHead({
   title: 'Contact - Kizuren',
 });
 
 const { config } = useSiteLinks();
 
-const schema = z.object({
+const schema = computed(() => z.object({
   email: z
     .string()
-    .email({ message: 'Please enter a valid email address' })
-    .min(1, { message: 'Email is required' }),
-  subject: z.string().min(3, { message: 'Subject must be at least 3 characters' }),
-  message: z.string().min(10, { message: 'Message must be at least 10 characters' }),
-});
+    .email({ message: t.value.contactPage.emailRequired })
+    .min(1, { message: t.value.contactPage.emailRequired }),
+  subject: z.string().min(3, { message: t.value.contactPage.subjectRequired }),
+  message: z.string().min(10, { message: t.value.contactPage.messageRequired }),
+}));
 
 const state = reactive({
   email: '',
@@ -131,8 +133,8 @@ async function onSubmit() {
     });
 
     toast.add({
-      title: 'Message Sent!',
-      description: 'Your message has been sent successfully.',
+      title: t.value.contactPage.successTitle,
+      description: t.value.contactPage.successDesc,
       icon: 'i-heroicons-check-circle',
       color: 'pixelgreen',
       ui: {
@@ -145,8 +147,8 @@ async function onSubmit() {
     state.message = '';
   } catch {
     toast.add({
-      title: 'Error',
-      description: 'Something went wrong. Please try again.',
+      title: t.value.contactPage.errorTitle,
+      description: t.value.contactPage.errorDesc,
       icon: 'i-heroicons-exclamation-circle',
       color: 'error',
     });

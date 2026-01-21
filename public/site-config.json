@@ -7,63 +7,117 @@
   },
   "projects": [
     {
-      "title": "Homepage",
+      "title": {
+        "en": "Homepage",
+        "ja": "ホームページ"
+      },
       "url": "https://kizuren.dev",
       "github": "https://github.com/Kizuren/kizuren.dev",
       "icon": "heroicons:globe-alt",
-      "description": "This very site"
+      "description": {
+        "en": "This very site",
+        "ja": "このサイト"
+      }
     },
     {
-      "title": "µLinkShortener",
+      "title": {
+        "en": "µLinkShortener",
+        "ja": "µLinkShortener"
+      },
       "url": "https://u.kizuren.dev",
       "github": "https://github.com/Kizuren/uLinkShortener",
       "icon": "line-md:link",
-      "description": "URL shortener and data collector"
+      "description": {
+        "en": "URL shortener and data collector",
+        "ja": "URL短縮およびデータ収集ツール"
+      }
     },
     {
-      "title": "QuizConnect",
+      "title": {
+        "en": "QuizConnect",
+        "ja": "QuizConnect"
+      },
       "url": "https://github.com/Kizuren/QuizConnect",
       "github": "https://github.com/Kizuren/QuizConnect",
       "icon": "heroicons:globe-alt",
-      "description": "A small Quiz platform"
+      "description": {
+        "en": "A small Quiz platform",
+        "ja": "小さなクイズプラットフォーム"
+      }
     },
     {
-      "title": "Keygenmusic-api",
+      "title": {
+        "en": "Keygenmusic-api",
+        "ja": "Keygenmusic-api"
+      },
       "url": "https://keygenmusic.kizuren.dev/docs",
       "icon": "line-md:downloading",
-      "description": "An API to fetch data and download keygenmusic"
+      "description": {
+        "en": "An API to fetch data and download keygenmusic",
+        "ja": "keygenmusic のデータ取得とダウンロードのための API"
+      }
     }
   ],
   "hosted": [
     {
-      "title": "Status",
+      "title": {
+        "en": "Status",
+        "ja": "ステータス"
+      },
       "url": "https://status.kizuren.dev",
       "icon": "i-simple-icons-statuspage",
-      "description": "The status page"
+      "description": {
+        "en": "The status page",
+        "ja": "ステータスページ"
+      }
     },
     {
-      "title": "Vencloud",
+      "title": {
+        "en": "Vencloud",
+        "ja": "Vencloud"
+      },
       "url": "https://vencloud.kizuren.dev",
       "icon": "heroicons:globe-alt",
-      "description": "Self-hosted vencloud instance"
+      "description": {
+        "en": "Self-hosted vencloud instance",
+        "ja": "自己ホスト型 Vencloud インスタンス"
+      }
     },
     {
-      "title": "Git",
+      "title": {
+        "en": "Git",
+        "ja": "Git"
+      },
       "url": "https://git.kizuren.dev",
       "icon": "i-simple-icons-git",
-      "description": "Self-hosted Git instance"
+      "description": {
+        "en": "Self-hosted Git instance",
+        "ja": "自己ホスト型 Git インスタンス"
+      }
     },
     {
-      "title": "Open-WebUI",
+      "title": {
+        "en": "Open-WebUI",
+        "ja": "Open-WebUI"
+      },
       "url": "https://ollama.kizuren.dev",
       "icon": "i-simple-icons-ollama",
-      "description": "Self-hosted WebUI for LLMs using Ollama"
+      "description": {
+        "en": "Self-hosted WebUI for LLMs using Ollama",
+        "ja": "Ollama を使用した LLM 用の自己ホスト型 WebUI"
+      }
     }
   ],
   "games": [
     {
-      "title": "Shanti Manti",
-      "description": "Shanti Manti has to fight against his classmates to survive.",
+      "title": {
+        "en": "Shanti Manti",
+        "ja": "Shanti Manti"
+      },
+      "description": {
+        "en": "Shanti Manti has to fight against his classmates to survive.",
+        "ja": "Shanti Manti はクラスメートと戦い生き残る必要があります。"
+      },
       "status": "Released",
       "logo": "/icons/game/shantimanti.png",
       "url": [
@@ -80,8 +134,14 @@
       ]
     },
     {
-      "title": "SynthMaze",
-      "description": "You have to solve the Mazes to escape from the Enemy's headquarter.",
+      "title": {
+        "en": "SynthMaze",
+        "ja": "SynthMaze"
+      },
+      "description": {
+        "en": "You have to solve the Mazes to escape from the Enemy's headquarter.",
+        "ja": "敵の本部から脱出するために迷路を解く必要があります。"
+      },
       "status": "Abandoned",
       "logo": "/icons/game/synthmaze.png",
       "url": [
@@ -98,34 +158,64 @@
       ]
     },
     {
-      "title": "TetrisRemastered",
-      "description": "Tetris in 2D & 3D with customizable music engine",
+      "title": {
+        "en": "TetrisRemastered",
+        "ja": "TetrisRemastered"
+      },
+      "description": {
+        "en": "Tetris in 2D & 3D with customizable music engine",
+        "ja": "カスタマイズ可能な音楽エンジンを備えた 2D および 3D テトリス"
+      },
       "status": "In development",
       "logo": "/icons/game/tetrisremastered.png"
     }
   ],
   "teams": [
     {
-      "title": "Crysoline",
-      "description": "An independent team scraping anime video streams",
+      "title": {
+        "en": "Crysoline",
+        "ja": "Crysoline"
+      },
+      "description": {
+        "en": "An independent team scraping anime video streams",
+        "ja": "アニメビデオストリームをスクレイピングする独立したチーム"
+      },
       "url": "https://crysoline.moe",
       "logo": "/icons/team/crysoline.svg"
     },
     {
-      "title": "OtakuAni",
-      "description": "A small team working on a free anime site",
+      "title": {
+        "en": "OtakuAni",
+        "ja": "OtakuAni"
+      },
+      "description": {
+        "en": "A small team working on a free anime site",
+        "ja": "無料のアニメサイトに取り組んでいる小さなチーム"
+      },
       "url": "https://otakuani.me",
       "logo": "/icons/team/otakuani.svg"
     },
     {
-      "title": "ZaoCore",
-      "description": "A company working with the anime and developer community. (Owns 1Anime & DevX)",
+      "title": {
+        "en": "ZaoCore",
+        "ja": "ZaoCore"
+      },
+      "description": {
+        "en": "A company working with the anime and developer community. (Owns 1Anime & DevX)",
+        "ja": "アニメおよび開発者コミュニティと協力している会社（1Anime と DevX を所有）"
+      },
       "url": "https://zaocore.com",
       "logo": "/icons/team/zaocore.svg"
     },
     {
-      "title": "Zenkuro",
-      "description": "A team working on privacy-focused projects",
+      "title": {
+        "en": "Zenkuro",
+        "ja": "Zenkuro"
+      },
+      "description": {
+        "en": "A team working on privacy-focused projects",
+        "ja": "プライバシーに焦点を当てたプロジェクトに取り組んでいるチーム"
+      },
       "url": "https://zenkuro.net",
       "logo": "/icons/team/zenkuro.svg"
     }
