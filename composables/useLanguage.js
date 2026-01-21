@@ -6,8 +6,8 @@ export const useLanguage = () => {
     const hostname = requestURL.hostname;
 
     // Check for Japanese domain (both IDN and Punycode)
-    // キズレン.みんな converts to xn--eckq7fg8cygsa1a1je.xn--q9jyb4c
-    if (hostname === 'キズレン.みんな' || hostname === 'xn--eckq7fg8cygsa1a1je.xn--q9jyb4c') {
+    // キズレン.みんな converts to xn--nck0a4k2a.xn--q9jyb4c
+    if (hostname === 'キズレン.みんな' || hostname === 'xn--nck0a4k2a.xn--q9jyb4c') {
       return 'ja';
     }
     
@@ -21,7 +21,7 @@ export const useLanguage = () => {
     
     return {
       en: `https://kizuren.dev${pathname}`,
-      ja: `https://xn--eckq7fg8cygsa1a1je.xn--q9jyb4c${pathname}`,
+      ja: `https://xn--nck0a4k2a.xn--q9jyb4c${pathname}`,
       default: `https://kizuren.dev${pathname}`
     };
   };
