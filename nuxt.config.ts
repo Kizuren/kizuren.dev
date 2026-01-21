@@ -54,7 +54,7 @@ export default defineNuxtConfig({
           loc: page,
           alternatives: [
             { hreflang: 'en', href: `https://kizuren.dev${page}` },
-            { hreflang: 'ja', href: `https://xn--eckq7fg8cygsa1a1je.xn--q9jyb4c${page}` },
+            { hreflang: 'ja', href: `https://xn--nck0a4k2a.xn--q9jyb4c${page}` },
             { hreflang: 'x-default', href: `https://kizuren.dev${page}` }
           ]
         });
