@@ -3,28 +3,27 @@
       <div id="header-box" class="w-full max-w-4xl">
         <div class="intro-content">
           <h1 class="text-5xl sm:text-6xl font-bold mb-4">
-            Hi, I'm <span class="text-pixel-green">Kizuren</span>
+            {{ t.greeting }} <span class="text-pixel-green">{{ t.name }}</span>
           </h1>
           
           <p class="text-xl sm:text-2xl text-gray-400 mb-12">
-            Developer & Creator
+            {{ t.role }}
           </p>
 
           <div class="text-base sm:text-lg text-gray-300 space-y-6 mb-12 max-w-xl">
             <p>
-              I'm passionate about creating things and sharing them with the community.
+              {{ t.intro1 }}
             </p>
             <p>
-              Explore my <ULink to="/projects" class="text-pixel-green hover:text-pixel-green-hover font-semibold">projects</ULink>, 
-              check out the <ULink to="/projects#games" class="text-pixel-green hover:text-pixel-green-hover font-semibold">games</ULink> I've worked on, 
-              or check out the <ULink to="/projects#teams" class="text-pixel-green hover:text-pixel-green-hover font-semibold">teams</ULink> I have been working with.
+              {{ t.intro2 }} <ULink to="/projects" class="text-pixel-green hover:text-pixel-green-hover font-semibold">{{ t.projects }}</ULink>, 
+              {{ t.intro3 }} <ULink to="/projects#games" class="text-pixel-green hover:text-pixel-green-hover font-semibold">{{ t.games }}</ULink> {{ t.intro4 }} <ULink to="/projects#teams" class="text-pixel-green hover:text-pixel-green-hover font-semibold">{{ t.teams }}</ULink> {{ t.intro5 }}
             </p>
           </div>
 
           <!-- Quick Links -->
           <div class="flex flex-wrap gap-3">
             <UButton
-                label="Projects"
+                :label="t.projects"
                 icon="i-heroicons-code-bracket"
                 to="/projects"
                 size="lg"
@@ -32,7 +31,7 @@
             />
             
             <UButton
-                label="Games"
+                :label="t.games"
                 icon="i-heroicons-puzzle-piece"
                 to="/projects#games"
                 size="lg"
@@ -40,7 +39,7 @@
             />
 
             <UButton
-                label="Contact"
+                :label="t.contact"
                 icon="line-md:email"
                 to="/contact"
                 target="_blank"
@@ -50,7 +49,7 @@
 
             <UButton
                 v-if="config.siteLinks.github"
-                label="GitHub"
+                :label="t.github"
                 variant="outline"
                 icon="i-simple-icons-github"
                 :to="config.siteLinks.github"
@@ -69,11 +68,12 @@
 </template>
 
 <script setup>
+const { t } = useTranslations();
+const { config } = useSiteLinks();
+
 useHead({
   title: 'Home - Kizuren',
 });
-
-const { config } = useSiteLinks();
 </script>
 
 <style>

@@ -12,6 +12,23 @@ export function useSiteLinks() {
   const isLoading = ref(true);
   const error = ref(null);
   const toast = useToast();
+  const { currentLanguage } = useLanguage();
+
+  const getLocalizedValue = (value) => {
+    if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
+      return value[currentLanguage.value] || value.en || '';
+    }
+    return value;
+  };
+
+  const localizeArray = (array) => {
+    if (!array) return [];
+    return array.map(item => ({
+      ...item,
+      title: getLocalizedValue(item.title),
+      description: getLocalizedValue(item.description)
+    }));
+  };
 
   async function loadConfig() {
     try {
@@ -31,10 +48,10 @@ export function useSiteLinks() {
       }
 
       config.siteLinks = data['site-links'] || {};
-      config.projects = data.projects || [];
-      config.hosted = data.hosted || [];
-      config.games = data.games || [];
-      config.teams = data.teams || [];
+      config.projects = localizeArray(data.projects);
+      config.hosted = localizeArray(data.hosted);
+      config.games = localizeArray(data.games);
+      config.teams = localizeArray(data.teams);
 
       error.value = null;
     } catch (err) {

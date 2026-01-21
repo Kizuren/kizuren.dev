@@ -4,9 +4,9 @@
     "": {
       "name": "nuxt-app",
       "dependencies": {
-        "@nuxt/content": "^3.10.0",
+        "@nuxt/content": "^3.11.0",
         "@nuxt/fonts": "^0.11.4",
-        "@nuxt/icon": "^2.2.0",
+        "@nuxt/icon": "^2.2.1",
         "@nuxt/image": "^1.11.0",
         "@nuxt/scripts": "^0.12.2",
         "@nuxt/ui": "^3.3.7",
@@ -15,19 +15,20 @@
         "@tailwindcss/vite": "^4.1.18",
         "@unhead/vue": "^2.1.2",
         "animate.css": "^4.1.1",
-        "better-sqlite3": "^12.6.0",
+        "better-sqlite3": "^12.6.2",
         "nuxt": "^4.2.2",
         "sass": "^1.97.2",
         "tailwindcss": "^4.1.18",
         "typescript": "^5.9.3",
-        "vue": "^3.5.26",
+        "vue": "^3.5.27",
         "vue-router": "^4.6.4",
       },
       "devDependencies": {
         "@biomejs/biome": "2.3.11",
+        "@iconify-json/heroicons": "^1.2.3",
         "@iconify-json/line-md": "^1.2.13",
-        "@iconify-json/material-symbols": "^1.2.51",
-        "@iconify-json/simple-icons": "^1.2.66",
+        "@iconify-json/material-symbols": "^1.2.52",
+        "@iconify-json/simple-icons": "^1.2.67",
         "@nuxtjs/mdc": "^0.17.4",
         "@tailwindcss/typography": "^0.5.19",
       },
@@ -230,6 +231,8 @@
     "@humanwhocodes/module-importer": ["@humanwhocodes/module-importer@1.0.1", "", {}, "sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA=="],
 
     "@humanwhocodes/retry": ["@humanwhocodes/retry@0.4.3", "", {}, "sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ=="],
+
+    "@iconify-json/heroicons": ["@iconify-json/heroicons@1.2.3", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-n+vmCEgTesRsOpp5AB5ILB6srsgsYK+bieoQBNlafvoEhjVXLq8nIGN4B0v/s4DUfa0dOrjwE/cKJgIKdJXOEg=="],
 
     "@iconify-json/line-md": ["@iconify-json/line-md@1.2.13", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-XFXThXsEQ2Wzzn+ze2T1d+JHkkFvI1AxiVKnOox4qFbdR9EVikckZlUK+/DUsV4zSy6pMQAgXpIk+1xG8qFYPQ=="],
 
