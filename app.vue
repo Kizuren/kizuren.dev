@@ -9,6 +9,7 @@
 <script setup>
 const colorMode = useColorMode();
 const { getAlternateUrls, currentLanguage } = useLanguage();
+const { t } = useTranslations();
 
 const favicon = computed(() => {
   const timestamp = Date.now();
@@ -28,6 +29,12 @@ const headLinks = computed(() => [
 
 useHead({
   htmlAttrs: { lang: currentLanguage.value },
+  titleTemplate: '%s',
+  meta: [
+    { name: 'description', content: t.value.meta.siteDescription },
+    { property: 'og:site_name', content: 'Kizuren' },
+    { property: 'og:type', content: 'website' }
+  ],
   link: headLinks,
 });
 </script>

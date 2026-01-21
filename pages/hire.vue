@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 const { currentLanguage } = useLanguage();
+const { t } = useTranslations();
 
 const contentPath = computed(() => {
   return currentLanguage.value === 'ja' ? '/hire.ja' : '/hire';
@@ -11,7 +12,12 @@ const { data: page } = await useAsyncData(
 );
 
 useHead(() => ({
-  title: page.value?.title || 'Hire Me - Kizuren',
+  title: page.value?.title || `${t.value.meta.hireTitle} - ${t.value.name}`,
+  meta: [
+    { name: 'description', content: t.value.meta.hireDescription },
+    { property: 'og:title', content: page.value?.title || `${t.value.meta.hireTitle} - ${t.value.name}` },
+    { property: 'og:description', content: t.value.meta.hireDescription }
+  ]
 }));
 </script>
 

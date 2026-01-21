@@ -72,7 +72,12 @@ const { t } = useTranslations();
 const { config } = useSiteLinks();
 
 useHead({
-  title: 'Home - Kizuren',
+  title: `${t.value.meta.homeTitle} - ${t.value.name}`,
+  meta: [
+    { name: 'description', content: t.value.meta.homeDescription },
+    { property: 'og:title', content: `${t.value.meta.homeTitle} - ${t.value.name}` },
+    { property: 'og:description', content: t.value.meta.homeDescription }
+  ]
 });
 </script>
 

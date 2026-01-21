@@ -3,6 +3,19 @@ export const useTranslations = () => {
 
   const translations = {
     en: {
+      // Meta tags
+      meta: {
+        siteDescription: "The official site for Kizuren.dev",
+        homeTitle: "Home",
+        homeDescription: "Developer & Creator passionate about creating things and sharing them with the community.",
+        projectsTitle: "Projects",
+        projectsDescription: "Explore my projects, hosted services, games, and teams I work with.",
+        contactTitle: "Contact",
+        contactDescription: "Get in touch with Kizuren via Discord or email.",
+        hireTitle: "Hire Me",
+        hireDescription: "Collaborate on projects with Kizuren. Backend, DevOps, SysAdmin, and Networking specialist."
+      },
+
       // Home page
       greeting: "Hi, I'm",
       name: "Kizuren",
@@ -90,6 +103,19 @@ export const useTranslations = () => {
       }
     },
     ja: {
+      // Meta tags
+      meta: {
+        siteDescription: "Kizuren.dev の公式サイト",
+        homeTitle: "ホーム",
+        homeDescription: "物を作り、コミュニティと共有することに情熱を持つ開発者＆クリエイター。",
+        projectsTitle: "プロジェクト",
+        projectsDescription: "私のプロジェクト、ホスティングサービス、ゲーム、そして一緒に作業しているチームをご覧ください。",
+        contactTitle: "お問い合わせ",
+        contactDescription: "Discord またはメールでキズレンにお問い合わせください。",
+        hireTitle: "採用情報",
+        hireDescription: "キズレンとプロジェクトでコラボレーション。バックエンド、DevOps、システム管理、ネットワーキングの専門家。"
+      },
+
       // Home page
       greeting: "こんにちは、私は",
       name: "キズレン",
