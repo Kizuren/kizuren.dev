@@ -179,7 +179,12 @@ import { ref, onMounted, nextTick, watch } from 'vue';
 const { t } = useTranslations();
 
 useHead({
-  title: 'Projects - Kizuren',
+  title: `${t.value.meta.projectsTitle} - ${t.value.name}`,
+  meta: [
+    { name: 'description', content: t.value.meta.projectsDescription },
+    { property: 'og:title', content: `${t.value.meta.projectsTitle} - ${t.value.name}` },
+    { property: 'og:description', content: t.value.meta.projectsDescription }
+  ]
 });
 
 const { config } = useSiteLinks();

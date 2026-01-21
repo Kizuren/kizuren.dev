@@ -96,7 +96,12 @@ import { z } from 'zod';
 const { t } = useTranslations();
 
 useHead({
-  title: 'Contact - Kizuren',
+  title: `${t.value.meta.contactTitle} - ${t.value.name}`,
+  meta: [
+    { name: 'description', content: t.value.meta.contactDescription },
+    { property: 'og:title', content: `${t.value.meta.contactTitle} - ${t.value.name}` },
+    { property: 'og:description', content: t.value.meta.contactDescription }
+  ]
 });
 
 const { config } = useSiteLinks();
