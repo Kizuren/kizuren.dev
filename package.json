@@ -38,7 +38,7 @@
     "@iconify-json/line-md": "^1.2.14",
     "@iconify-json/material-symbols": "^1.2.55",
     "@iconify-json/simple-icons": "^1.2.71",
-    "@nuxtjs/mdc": "^0.17.4",
+    "@nuxtjs/mdc": "^0.20.1",
     "@tailwindcss/typography": "^0.5.19"
   },
   "trustedDependencies": [
