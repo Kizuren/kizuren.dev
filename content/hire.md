@@ -24,5 +24,5 @@ If you want to collaborate on a project or work together, feel free to [contact]
 
 ## Price
 
-Free, if I am interested :)
+Free, if I am interested :)<br>
 Else, we can always talk about a price, I am usually pretty cheap.
