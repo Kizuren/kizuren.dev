@@ -22,7 +22,7 @@
     "@nuxtjs/sitemap": "^7.6.0",
     "@tailwindcss/postcss": "^4.1.18",
     "@tailwindcss/vite": "^4.1.18",
-    "@unhead/vue": "^2.1.4",
+    "@unhead/vue": "^3.0.3",
     "animate.css": "^4.1.1",
     "better-sqlite3": "^12.6.2",
     "nuxt": "^4.3.1",
