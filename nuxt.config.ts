@@ -16,6 +16,15 @@ export default defineNuxtConfig({
 
   css: ['~/assets/main.css'],
 
+  fonts: {
+    families: [
+      {
+        name: 'Press Start 2P',
+        weights: ['400'],
+      },
+    ],
+  },
+
   colorMode: {
     preference: 'system',
     fallback: 'dark',
@@ -36,6 +45,24 @@ export default defineNuxtConfig({
 
   site: {
     url: 'https://kizuren.dev',
+  },
+
+  routeRules: {
+    '/_nuxt/**': {
+      headers: {
+        'cache-control': 'public, max-age=31536000, immutable',
+      },
+    },
+    '/icons/**': {
+      headers: {
+        'cache-control': 'public, max-age=31536000, immutable',
+      },
+    },
+    '/favicon*.ico': {
+      headers: {
+        'cache-control': 'public, max-age=31536000, immutable',
+      },
+    },
   },
 
   sitemap: {
