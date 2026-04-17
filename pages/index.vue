@@ -61,7 +61,14 @@
         </div>
 
         <div class="profile-picture">
-          <NuxtImg src="/icons/flower-r.png" alt="Kizuren" />
+          <NuxtImg
+            src="/icons/flower-r.png"
+            alt="Kizuren"
+            width="200"
+            height="200"
+            sizes="200px"
+            loading="eager"
+          />
         </div>
       </div>
     </div>

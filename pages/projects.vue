@@ -103,9 +103,12 @@
           >
             <!-- Game Logo and Status -->
             <div class="flex items-center justify-between">
-              <img
+              <NuxtImg
                 :src="getImageSrc(game)"
                 alt="Game Logo"
+                width="48"
+                height="48"
+                loading="lazy"
                 class="w-12 h-12 object-contain"
                 @error="handleImageError"
               />
@@ -155,9 +158,12 @@
             class="list-item"
           >
             <div class="flex items-center gap-4">
-              <img
+              <NuxtImg
                 :src="team.logo"
                 :alt="team.title"
+                width="32"
+                height="32"
+                loading="lazy"
                 class="w-8 h-8 object-contain flex-shrink-0"
               />
               <div class="flex-grow">
