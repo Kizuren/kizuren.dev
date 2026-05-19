@@ -39,7 +39,7 @@
     "@iconify-json/lucide": "^1.2.102",
     "@iconify-json/material-symbols": "^1.2.67",
     "@iconify-json/simple-icons": "^1.2.78",
-    "@nuxtjs/mdc": "^0.21.1",
+    "@nuxtjs/mdc": "^0.22.0",
     "@tailwindcss/typography": "^0.5.19"
   },
   "trustedDependencies": [
