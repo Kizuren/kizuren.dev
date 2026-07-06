@@ -34,6 +34,32 @@
     },
     {
       "title": {
+        "en": "LidlConnect.py",
+        "ja": "LidlConnect.py"
+      },
+      "url": "https://github.com/Kizuren/LidlConnect.py",
+      "github": "https://github.com/Kizuren/LidlConnect.py",
+      "icon": "simple-icons:python",
+      "description": {
+        "en": "Python API client for Lidl Connect",
+        "ja": "Lidl Connect 用の Python API クライアント"
+      }
+    },
+    {
+      "title": {
+        "en": "LidlConnect.js",
+        "ja": "LidlConnect.js"
+      },
+      "url": "https://github.com/Kizuren/LidlConnect.js",
+      "github": "https://github.com/Kizuren/LidlConnect.js",
+      "icon": "simple-icons:javascript",
+      "description": {
+        "en": "JS/TS API client for Lidl Connect",
+        "ja": "Lidl Connect 用の JS/TS API クライアント"
+      }
+    },
+    {
+      "title": {
         "en": "QuizConnect",
         "ja": "QuizConnect"
       },
@@ -185,30 +211,6 @@
     },
     {
       "title": {
-        "en": "OtakuAni",
-        "ja": "OtakuAni"
-      },
-      "description": {
-        "en": "A small team working on a free anime site",
-        "ja": "無料のアニメサイトに取り組んでいる小さなチーム"
-      },
-      "url": "https://otakuani.me",
-      "logo": "/icons/team/otakuani.svg"
-    },
-    {
-      "title": {
-        "en": "ZaoCore",
-        "ja": "ZaoCore"
-      },
-      "description": {
-        "en": "A company working with the anime and developer community. (Owns 1Anime & DevX)",
-        "ja": "アニメおよび開発者コミュニティと協力している会社（1Anime と DevX を所有）"
-      },
-      "url": "https://zaocore.com",
-      "logo": "/icons/team/zaocore.svg"
-    },
-    {
-      "title": {
         "en": "Zenkuro",
         "ja": "Zenkuro"
       },
@@ -218,6 +220,18 @@
       },
       "url": "https://zenkuro.net",
       "logo": "/icons/team/zenkuro.svg"
+    },
+    {
+      "title": {
+        "en": "BlackObjects",
+        "ja": "BlackObjects"
+      },
+      "description": {
+        "en": "A team doing random fun things (like TermiCord)",
+        "ja": "楽しいことをランダムにやっているチーム（TermiCord など）"
+      },
+      "url": "https://github.com/BlackObjects",
+      "logo": "/icons/team/blackobjects.svg"
     }
   ]
 }
