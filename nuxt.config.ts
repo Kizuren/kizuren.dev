@@ -4,6 +4,18 @@ import type { SitemapUrlInput } from "@nuxtjs/sitemap";
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
+  hooks: {
+    'pages:extend'(pages) {
+      for (const page of [...pages]) {
+        pages.push({
+          ...page,
+          name: page.name ? `${page.name}-ja` : undefined,
+          path: page.path === '/' ? '/ja' : `/ja${page.path}`,
+        });
+      }
+    },
+  },
+
   modules: [
     '@nuxt/content',
     '@nuxt/fonts',
@@ -74,19 +86,20 @@ export default defineNuxtConfig({
     ],
     urls: async () => {
       const pages = ['/', '/projects', '/hire', '/contact'];
-      const urls: SitemapUrlInput[] | PromiseLike<SitemapUrlInput[]> | { loc: string; alternatives: { hreflang: string; href: string; }[]; }[] = [];
-      
+      const urls: SitemapUrlInput[] = [];
+
       pages.forEach(page => {
-        urls.push({
-          loc: page,
-          alternatives: [
-            { hreflang: 'en', href: `https://kizuren.dev${page}` },
-            { hreflang: 'ja', href: `https://xn--nck0a4k2a.xn--q9jyb4c${page}` },
-            { hreflang: 'x-default', href: `https://kizuren.dev${page}` }
-          ]
-        });
+        const jaPage = page === '/' ? '/ja' : `/ja${page}`;
+        const alternatives = [
+          { hreflang: 'en', href: `https://kizuren.dev${page}` },
+          { hreflang: 'ja', href: `https://kizuren.dev${jaPage}` },
+          { hreflang: 'x-default', href: `https://kizuren.dev${page}` }
+        ];
+
+        urls.push({ loc: page, alternatives });
+        urls.push({ loc: jaPage, alternatives });
       });
-      
+
       return urls;
     }
   },

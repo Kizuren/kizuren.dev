@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { currentLanguage } = useLanguage();
+const { currentLanguage, localePath } = useLanguage();
 const { t } = useTranslations();
 
 const contentPath = computed(() => {
@@ -31,7 +31,7 @@ useHead(() => ({
     <div class="empty-page">
       <h1>404 Page Not Found</h1>
       <p>Oops! The content you're looking for doesn't exist.</p>
-      <ULink to="/">Go back home</ULink>
+      <ULink :to="localePath('/')">Go back home</ULink>
     </div>
   </template>
 </template>
