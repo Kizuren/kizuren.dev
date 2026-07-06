@@ -15,8 +15,8 @@
               {{ t.intro1 }}
             </p>
             <p>
-              {{ t.intro2 }} <ULink to="/projects" class="text-pixel-green hover:text-pixel-green-hover font-semibold">{{ t.projects }}</ULink>, 
-              {{ t.intro3 }} <ULink to="/projects#games" class="text-pixel-green hover:text-pixel-green-hover font-semibold">{{ t.games }}</ULink> {{ t.intro4 }} <ULink to="/projects#teams" class="text-pixel-green hover:text-pixel-green-hover font-semibold">{{ t.teams }}</ULink> {{ t.intro5 }}
+              {{ t.intro2 }} <ULink :to="localePath('/projects')" class="text-pixel-green hover:text-pixel-green-hover font-semibold">{{ t.projects }}</ULink>,
+              {{ t.intro3 }} <ULink :to="localePath('/projects#games')" class="text-pixel-green hover:text-pixel-green-hover font-semibold">{{ t.games }}</ULink> {{ t.intro4 }} <ULink :to="localePath('/projects#teams')" class="text-pixel-green hover:text-pixel-green-hover font-semibold">{{ t.teams }}</ULink> {{ t.intro5 }}
             </p>
           </div>
 
@@ -25,15 +25,15 @@
             <UButton
                 :label="t.projects"
                 icon="i-heroicons-code-bracket"
-                to="/projects"
+                :to="localePath('/projects')"
                 size="lg"
                 class="green-button"
             />
-            
+
             <UButton
                 :label="t.games"
                 icon="i-heroicons-puzzle-piece"
-                to="/projects#games"
+                :to="localePath('/projects#games')"
                 size="lg"
                 class="green-button"
             />
@@ -41,7 +41,7 @@
             <UButton
                 :label="t.contact"
                 icon="line-md:email"
-                to="/contact"
+                :to="localePath('/contact')"
                 target="_blank"
                 size="lg"
                 class="green-button"
@@ -77,6 +77,7 @@
 <script setup>
 const { t } = useTranslations();
 const { config } = useSiteLinks();
+const { localePath } = useLanguage();
 
 useHead({
   title: `${t.value.meta.homeTitle} - ${t.value.name}`,

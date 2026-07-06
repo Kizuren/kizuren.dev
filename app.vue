@@ -8,7 +8,7 @@
 
 <script setup>
 const colorMode = useColorMode();
-const { getAlternateUrls, currentLanguage } = useLanguage();
+const { currentLanguage, alternatePaths, canonicalUrl } = useLanguage();
 const { t } = useTranslations();
 
 const favicon = computed(() => {
@@ -18,20 +18,14 @@ const favicon = computed(() => {
     : `/favicon.ico?t=${timestamp}`;
 });
 
-const alternateUrls = computed(() => getAlternateUrls());
-
 const baseTitle = 'Kizuren Dev';
-
-const canonicalUrl = computed(() =>
-  currentLanguage.value === 'ja' ? alternateUrls.value.ja : alternateUrls.value.en
-);
 
 const headLinks = computed(() => [
   { rel: 'icon', type: 'image/x-icon', href: favicon.value },
-  { rel: 'canonical', href: canonicalUrl.value },
-  { rel: 'alternate', hreflang: 'en', href: alternateUrls.value.en },
-  { rel: 'alternate', hreflang: 'ja', href: alternateUrls.value.ja },
-  { rel: 'alternate', hreflang: 'x-default', href: alternateUrls.value.default },
+  { rel: 'canonical', href: canonicalUrl() },
+  { rel: 'alternate', hreflang: 'en', href: `https://kizuren.dev${alternatePaths.value.en}` },
+  { rel: 'alternate', hreflang: 'ja', href: `https://kizuren.dev${alternatePaths.value.ja}` },
+  { rel: 'alternate', hreflang: 'x-default', href: `https://kizuren.dev${alternatePaths.value.en}` },
 ]);
 
 const identitySchema = computed(() => ({
@@ -46,7 +40,7 @@ const identitySchema = computed(() => ({
   ],
 }));
 
-useHead({
+useHead(() => ({
   htmlAttrs: { lang: currentLanguage.value },
   titleTemplate: (titleChunk) => {
     if (!titleChunk) return baseTitle;
@@ -58,12 +52,12 @@ useHead({
     { property: 'og:site_name', content: 'Kizuren' },
     { property: 'og:type', content: 'website' }
   ],
-  link: headLinks,
+  link: headLinks.value,
   script: [
     {
       type: 'application/ld+json',
       children: JSON.stringify(identitySchema.value),
     },
   ],
-});
+}));
 </script>
