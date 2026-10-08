@@ -70,18 +70,6 @@
         "en": "A small Quiz platform",
         "ja": "小さなクイズプラットフォーム"
       }
-    },
-    {
-      "title": {
-        "en": "Keygenmusic-api",
-        "ja": "Keygenmusic-api"
-      },
-      "url": "https://keygenmusic.kizuren.dev/docs",
-      "icon": "line-md:downloading",
-      "description": {
-        "en": "An API to fetch data and download keygenmusic",
-        "ja": "keygenmusic のデータ取得とダウンロードのための API"
-      }
     }
   ],
   "hosted": [
@@ -119,18 +107,6 @@
       "description": {
         "en": "Self-hosted Git instance",
         "ja": "自己ホスト型 Git インスタンス"
-      }
-    },
-    {
-      "title": {
-        "en": "Open-WebUI",
-        "ja": "Open-WebUI"
-      },
-      "url": "https://ollama.kizuren.dev",
-      "icon": "i-simple-icons-ollama",
-      "description": {
-        "en": "Self-hosted WebUI for LLMs using Ollama",
-        "ja": "Ollama を使用した LLM 用の自己ホスト型 WebUI"
       }
     }
   ],
@@ -199,18 +175,6 @@
   "teams": [
     {
       "title": {
-        "en": "Crysoline",
-        "ja": "Crysoline"
-      },
-      "description": {
-        "en": "An independent team scraping anime video streams",
-        "ja": "アニメビデオストリームをスクレイピングする独立したチーム"
-      },
-      "url": "https://crysoline.moe",
-      "logo": "/icons/team/crysoline.svg"
-    },
-    {
-      "title": {
         "en": "Zenkuro",
         "ja": "Zenkuro"
       },
@@ -220,18 +184,6 @@
       },
       "url": "https://zenkuro.net",
       "logo": "/icons/team/zenkuro.svg"
-    },
-    {
-      "title": {
-        "en": "BlackObjects",
-        "ja": "BlackObjects"
-      },
-      "description": {
-        "en": "A team doing random fun things (like TermiCord)",
-        "ja": "楽しいことをランダムにやっているチーム（TermiCord など）"
-      },
-      "url": "https://github.com/BlackObjects",
-      "logo": "/icons/team/blackobjects.svg"
     }
   ]
 }
